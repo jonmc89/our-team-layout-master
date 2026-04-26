@@ -59,7 +59,6 @@ body {
 }
 
 .profile-card,
-.intro-card,
 .members-card {
     height: 25rem;
     width: 100%;
@@ -74,6 +73,11 @@ h1 {
 .intro-card {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
+    background-image: url(./resources/Background_decor.svg);
+    top: 0;
+    left: 0;
+    background-size: contain;
+    min-height: 20rem;
 }
 
 .intro-header {
