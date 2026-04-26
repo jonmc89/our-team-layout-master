@@ -72,7 +72,6 @@ h1 {
 }
 
 .intro-card {
-    max-height: 18rem;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
 }
@@ -88,6 +87,7 @@ h1 {
     font-weight: 400;
     color: var(--slate-grey);
     line-height: 150%;
+    font-size: clamp(1rem, 5vw, 1.2rem);
 }
 
 .profile-card {
@@ -175,4 +175,49 @@ button {
 
 button:hover {
     color: var(--blue);
+}
+
+/* || Media Queries */
+
+@media screen and (min-width: 64rem) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .intro-card {
+        grid-row: 1;
+        grid-column: span 3;
+    }
+
+    .intro-text {
+        width: 50%;
+    }
+
+    .seven {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+@media screen and (min-width: 90rem) {
+    .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 2rem;
+    }
+
+    .intro-card {
+        grid-column: span 2;
+    }
+
+    .intro-text {
+        width: 70%;
+    }
+
+    .seven {
+        grid-column: 1;
+        grid-row: 2;
+    }
 }
